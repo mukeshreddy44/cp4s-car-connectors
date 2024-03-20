@@ -3,31 +3,10 @@
         "type": {
             "type": "connectorType",
             "displayName": "Dummy",
-            "group": "<DOWNCASED_CONNECTOR_NAME>"
+            "group": "dummy"
         }
     },
     "configuration": {
-        "auth": {
-            "type": "fields",
-            "url": {
-                "type": "text"
-            },
-            "username": {
-                "type": "text"
-            },
-            "password": {
-                "type": "password"
-            }
-        },
-        "parameter":{
-            "type": "fields",
-        	"<required_parameter>": {
-                "type": "text"
-            },
-            "<optional_parameter>": {
-                "type": "text",
-                "optional": true
-            }
-        }
+
     }
 }
