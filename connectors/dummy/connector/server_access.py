@@ -45,7 +45,7 @@ class AssetServer(BaseAssetServer):
     def get_collection(self, asset_server_endpoint):
 
         current_dir = os.getcwd()
-        file_path = os.path.join(current_dir, "asset_files", f"{asset_server_endpoint}.json")
+        file_path = os.path.join(current_dir, "connector/asset_files", f"{asset_server_endpoint}.json")
 
         with open(file_path, 'r') as file:
             data = json.load(file)
