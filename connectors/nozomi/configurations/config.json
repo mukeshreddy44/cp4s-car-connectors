@@ -8,7 +8,7 @@
         },
         "type": {
             "type": "connectorType",
-            "displayName": "Nozomi",
+            "displayName": "Nozomi Vantage",
             "group": "nozomi"
         },
         "host": {

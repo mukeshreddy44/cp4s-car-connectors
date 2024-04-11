@@ -1,6 +1,6 @@
-﻿# Nozomi-CAR
+﻿# Nozomi Vantage-CAR
 
-Nozomi CAR Connector
+Nozomi Vantage CAR Connector
 
 ```
 I.   SUMMARY
