@@ -215,7 +215,7 @@ if [ -d "$CONNECTOR_SOURCE_FOLDER" ]; then
         fi
 
         echo "Building image: $REGISTRY_IMAGE_PATH"
-        docker build -t $REGISTRY_IMAGE_PATH $CONNECTOR_BUILD_FOLDER --platform linux/amd64
+        docker build -t $REGISTRY_IMAGE_PATH $CONNECTOR_BUILD_FOLDER --platform linux/amd64 --progress=plain
 
         echo "Pushing image: $REGISTRY_IMAGE_PATH"
         docker push $REGISTRY_IMAGE_PATH
@@ -232,7 +232,7 @@ if [ -d "$CONNECTOR_SOURCE_FOLDER" ]; then
         fi
     else
         echo "Building local image: $IMAGE:$TAG"
-        docker build -t $IMAGE:$TAG $CONNECTOR_BUILD_FOLDER --platform linux/amd64
+        docker build -t $IMAGE:$TAG $CONNECTOR_BUILD_FOLDER --platform linux/amd64  --progress=plain
     fi
     
     echo "*****************************************"

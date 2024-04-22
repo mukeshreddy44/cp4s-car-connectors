@@ -5,10 +5,7 @@ from car_framework.context import context
 
 class IncrementalImport(BaseIncrementalImport):
     def __init__(self):
-        # pass
         super().__init__()
-        # initialize the data handler.
-        # If data source doesn't have external reference property None can be supplied as parameter.
         self.data_handler = DataHandler()
         self.create_source_report_object()
 

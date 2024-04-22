@@ -15,6 +15,8 @@ version = '1.0.1'
 class App(BaseApp):
     def __init__(self):
         super().__init__('This script is used for pushing asset data to CP4S CAR ingestion microservice')
+        self.parser.add_argument('-host', dest='CONNECTION_HOST', default=os.getenv('CONNECTION_HOST',None), type=str, required=False, help='The url of the Asset data')
+
     def setup(self):
         super().setup()
         context().asset_server = AssetServer()

@@ -1,7 +1,8 @@
 import requests, base64
 import json
+import requests
 import os
-
+import time
 from car_framework.context import context
 from car_framework.util import DatasourceFailure
 from car_framework.server_access import BaseAssetServer
@@ -43,13 +44,19 @@ class AssetServer(BaseAssetServer):
 
     # Pulls asset data for all collection entities
     def get_collection(self, asset_server_endpoint):
+        url = f"{context().args.CONNECTION_HOST}/{asset_server_endpoint}.json"
+        response = requests.get(url)
+        if response.status_code == 200:
+            data = response.json()
 
-        current_dir = os.getcwd()
-        file_path = os.path.join(current_dir, "connector/asset_files", f"{asset_server_endpoint}.json")
-
-        with open(file_path, 'r') as file:
-            data = json.load(file)
         return data
+        # current_dir = os.getcwd()
+        
+        # file_path = os.path.join(current_dir, "connector/asset_files", f"{asset_server_endpoint}.json")
+
+        # with open(file_path, 'r') as file:
+        #     data = json.load(file)
+        # return data
 
 
     # To get the save point in data source. If data source doesn't have it then this function can be deleted.
