@@ -21,7 +21,7 @@ The data within files adheres to the schema outlined in the reference connector.
 
 To load sample data, start the server in the Reference Connector. Then, make an API call to the specified endpoint. Save the response as a JSON file.
 
-Check out sample data for all endpoints at: https://github.com/opencybersecurityalliance/stix-shifter/tree/develop/data/cybox/CAR
+Check out sample data for all endpoints at: https://github.com/IBM/cp4s-car-connectors/sample/data
 
 Here's a concise overview of its asset mapping. 
 Each file is dedicated for every end point and the asset bundle importer cunnrntly supports ``` vulnerabilities , sites , assets ,ip_addresses' ,mac_addresses , hosts , apps , ports```
@@ -103,7 +103,7 @@ required arguments in command line:
 ```
 positional arguments:
 
--host                       :base URL / root URL
+-host                       :base URL / root URL(https://raw.githubusercontent.com/IBM/cp4s-car-connectors/develop/sample/data)
 -car-service-url            :CAR DB url
 -car-service-key            :api_key
 -car-service-password       :password
@@ -119,11 +119,9 @@ pip3 install -r requirements.txt
 
 Running the connector:
 ```
-python3 app.py -car-service-url="<car-service-url>" -car-service-key="<car-service-key>" -car-service-password="<car-service-password>" -source=asset -url="<root-url>"
+python3 app.py -car-service-url="<car-service-url>" -car-service-key="<car-service-key>" -car-service-password="<car-service-password>" -source=asset -host="<root-url>"
 ```
 
 V. INITIAL IMPORT
 -----------------------------------------------------------------
 When we run the connector First time. It loads all the asset and their entities available from the source into CAR database.
-
-
