@@ -50,13 +50,6 @@ class AssetServer(BaseAssetServer):
             data = response.json()
 
         return data
-        # current_dir = os.getcwd()
-        
-        # file_path = os.path.join(current_dir, "connector/asset_files", f"{asset_server_endpoint}.json")
-
-        # with open(file_path, 'r') as file:
-        #     data = json.load(file)
-        # return data
 
 
     # To get the save point in data source. If data source doesn't have it then this function can be deleted.
