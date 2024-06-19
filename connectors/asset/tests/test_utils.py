@@ -9,9 +9,9 @@ from connector.data_handler import BaseDataHandler
 
 class Arguments:
     """Test args for Unit test case"""
-    server = " https://app.randori.io"
+    server = " https://app.asset.io"
     access_token = "whatever"
-    host = "demo.randori.io"
+    host = "demo.asset.io"
     source = "randori"
     CAR_SERVICE_URL = "https://app.demo.isc.ibm"
     api_key = "abcdef"
@@ -47,7 +47,6 @@ class RandoriMockResponse:
 def create_vertices_edges(import_obj, mock_import=None, mock_import_status=None,mock_import_schema=None):
     """tests for vertices and edges"""
     mock_import_schema = open(f'tests/mock_data/jsonschema.txt', 'r').read()
-    # mock_JSONSchema.return_value = open(f'tests/mock_data/jsonschema.txt', 'r').read()
     import_obj.import_vertices()
     import_obj.import_edges()
 

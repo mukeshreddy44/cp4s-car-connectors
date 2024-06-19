@@ -18,13 +18,10 @@ class TestImportFull(unittest.TestCase):
         """
              unit test for importing collections.
         """
-        # mock_get_collection.return_value = ['mocked_object1', 'mocked_object2']
         mock_get_collection.side_effect = get_mock_data_from_file
 
         full_import_obj = full_import_initialization()
         full_import_obj.create_source_report_object()
-        # for endpoints in endpoint_mapping:
-        #     full_import_obj.import_collection(endpoints,None)
 
         actual_response = create_vertices_edges(full_import_obj)
         validations = validate_all_handler(actual_response)
