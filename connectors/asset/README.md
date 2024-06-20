@@ -119,7 +119,7 @@ pip3 install -r requirements.txt
 
 Running the connector:
 ```
-python3 app.py -car-service-url=http://localhost:3000/api/car/v2 -car-service-key=none -car-service-password=none -source=test -host=https://raw.githubusercontent.com/mukeshreddy44/cp4s-car-connectors/dummy_connector/data
+python3 app.py -car-service-url="<car-service-url>" -car-service-key="<car-service-key>" -car-service-password="<car-service-password>" -source=asset -host="<root-url>"
 ```
 
 V. INITIAL IMPORT
