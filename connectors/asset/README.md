@@ -103,7 +103,7 @@ required arguments in command line:
 ```
 positional arguments:
 
--host                       :base URL / root URL(https://raw.githubusercontent.com/IBM/cp4s-car-connectors/develop/sample/data)
+-host                       :base URL / root URL(https://raw.githubusercontent.com/IBM/cp4s-car-connectors/develop/connector/asset/data)
 -car-service-url            :CAR DB url
 -car-service-key            :api_key
 -car-service-password       :password
